@@ -14,3 +14,5 @@ Cliquez sur le lien suivant pour accéder à chaque fichier
 
 [Les boucles](boucle.md)
 
+[Manipulation du html](html-in-JS.md)
+
