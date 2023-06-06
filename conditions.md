@@ -91,72 +91,59 @@ if (!condition) {
 }
 ```
 
-# Les boucles
+## Les conditions ternaires
 
-Les boucles permettent de répéter une action plusieurs fois.
-
-## La boucle `while`
-
-La boucle `while` permet de répéter une action tant qu'une condition est vraie.
+La condition ternaire permet de tester une condition, si elle est vraie, la première expression est retournée, sinon, la deuxième expression est retournée.
 
 ```javascript
-while (condition) {
-    // code à exécuter tant que la condition est vraie
-}
+condition ? expression1 : expression2
 ```
-## La boucle `for`
 
-La boucle `for` permet de répéter une action un nombre de fois défini.
+exemple :
 
 ```javascript
-for (initialisation; condition; incrémentation) {
-    // code à exécuter tant que la condition est vraie
-}
-
-// exemple
-
-for (let i = 0; i < 10; i++) {
-    console.log(i);
-}
+const age = 18;
+let majeur = age >= 18 ? true : false;
 ```
 
-## La boucle `for...in`
 
-La boucle `for...in` est une structure de contrôle en JavaScript qui permet d'itérer sur les propriétés d'un objet. Elle est particulièrement utile lorsque vous souhaitez parcourir les clés ou les propriétés d'un objet.
 
-La syntaxe de la boucle `for...in` est la suivante :
+## Les conditions multiples
+
+### La condition `switch`
+
+La condition `switch` permet de tester plusieurs conditions, si une est vraie, le code entre les accolades est exécuté.
 
 ```javascript
-for (variable in objet) {
-  // Instructions à exécuter pour chaque propriété
+switch (expression) {
+    case valeur1:
+        // code à exécuter si expression est égal à valeur1
+        break;
+    case valeur2:
+        // code à exécuter si expression est égal à valeur2
+        break;
+    default:
+        // code à exécuter si expression n'est égal à aucune des valeurs
 }
 ```
-- La variable est une variable temporaire qui sera utilisée pour stocker la clé de chaque propriété à chaque itération de la boucle.
-- L'objet est l'objet sur lequel vous souhaitez itérer.
+### La condition `switch` combinée
 
-Voici un exemple concret pour illustrer son utilisation :
+La condition `switch` combinée avec `&&` permet de tester plusieurs conditions, si elles sont toutes vraies, le code entre les accolades est exécuté.
 
 ```javascript
-const voiture = {
-  marque: 'Toyota',
-  modèle: 'Camry',
-  année: 2020
-};
-
-for (let propriete in voiture) {
-  console.log(propriete + ': ' + voiture[propriete]);
+switch (expression) {
+    case valeur1 && valeur2:
+        // code à exécuter si expression est égal à valeur1 et valeur2
+        break;
+    case valeur3 && valeur4:
+        // code à exécuter si expression est égal à valeur3 et valeur4
+        break;
+    default:
+        // code à exécuter si expression n'est égal à aucune des valeurs
 }
 ```
 
-Dans cet exemple, nous avons un objet voiture avec différentes propriétés telles que marque, modèle et année. La boucle `for...in` parcourt chaque propriété de l'objet et la stocke dans la variable propriete. Ensuite, nous utilisons cette variable pour accéder à la valeur de chaque propriété à l'aide de la notation entre crochets (`voiture[propriete]`) et affichons la clé et la valeur correspondantes à chaque itération
 
-La sortie de cet exemple serait :
-
-```
-marque: Toyota
-modèle: Camry
-année: 2020
-```
 
 
 
