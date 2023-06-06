@@ -109,6 +109,30 @@ let element = document.getElementById("element")
 element.classlist.toggle("maClass")
 ```
 
+#### setAttribute
+`setAttribute` permet de modifier/ajouter un attribut d'un element html
+
+```javascript
+let element = document.getElementById("element")
+element.setAttribute("id", "nouvelId")
+```
+
+#### removeAttribute
+`removeAttribute` permet de supprimer un attribut d'un element html
+
+```javascript
+let element = document.getElementById("element")
+element.removeAttribute("id")
+```
+
+#### getAttribute
+`getAttribute` permet de recuperer la valeur d'un attribut d'un element html
+
+```javascript
+let element = document.getElementById("element")
+let id = element.getAttribute("id")
+```
+
 
 
 
